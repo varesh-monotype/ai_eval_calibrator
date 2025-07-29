@@ -1,0 +1,32 @@
+{
+  "admin": {
+    "fonts from helvetica": [
+      {
+        "promptID": 1,
+        "promptName": "fonts from helvetica",
+        "md5": "ab08299944ea47df7a44c49a79f0bc9e",
+        "familyName": "helvetica",
+        "score": "Good Match",
+        "reason": "",
+        "username": "admin",
+        "email": "admin@example.com",
+        "timestamp": "2025-07-29T05:45:09.717Z"
+      }
+    ]
+  },
+  "varesh.tuli@monotype.com": {
+    "fonts from helvetica": [
+      {
+        "promptID": 1,
+        "promptName": "fonts from helvetica",
+        "md5": "ab08299944ea47df7a44c49a79f0bc9e",
+        "familyName": "helvetica",
+        "score": "Good Match",
+        "reason": "",
+        "username": "varesh.tuli@monotype.com",
+        "email": "varesh.tuli@monotype.com",
+        "timestamp": "2025-07-29T06:35:17.262Z"
+      }
+    ]
+  }
+}

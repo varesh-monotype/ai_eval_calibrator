@@ -1,0 +1,395 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Modern animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+.animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.shimmer {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Simple card styles */
+.card-simple {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.card-simple:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-glass {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.card-glass:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Simple button styles */
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(59, 130, 246, 0.2);
+    border: none;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.btn-secondary {
+    background: #64748b;
+    color: white;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(100, 116, 139, 0.2);
+    border: none;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background: #475569;
+    box-shadow: 0 2px 4px rgba(100, 116, 139, 0.3);
+}
+
+/* Simple input styles */
+.input-simple {
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+.input-simple:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Simple typography */
+.text-primary {
+    color: #1f2937;
+}
+
+.text-secondary {
+    color: #6b7280;
+}
+
+.text-muted {
+    color: #9ca3af;
+}
+
+/* Simple spacing utilities */
+.space-y-simple>*+* {
+    margin-top: 1rem;
+}
+
+.space-x-simple>*+* {
+    margin-left: 1rem;
+}
+
+/* Simple loading states */
+.loading-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.loading-dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: pulse 1.4s ease-in-out infinite both;
+}
+
+.loading-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+/* Simple progress bar */
+.progress-simple {
+    background: #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 6px;
+}
+
+.progress-simple-fill {
+    background: #3b82f6;
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.3s ease;
+}
+
+/* Simple badge styles */
+.badge-simple {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge-success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.badge-warning {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.badge-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Simple grid layouts */
+.grid-simple {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Simple responsive utilities */
+@media (max-width: 768px) {
+    .card-simple {
+        border-radius: 8px;
+        margin: 0 -0.5rem;
+    }
+
+    /* Improve touch targets on mobile */
+    button {
+        min-height: 44px;
+    }
+
+    /* Better spacing for mobile */
+    .space-y-simple>*+* {
+        margin-top: 0.75rem;
+    }
+
+    /* Improve text readability on mobile */
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Better scrollbar for mobile */
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    /* Improve focus states for mobile */
+    button:focus,
+    input:focus,
+    textarea:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .card-simple {
+        padding: 1rem;
+    }
+
+    /* Stack buttons vertically on very small screens */
+    .flex.space-x-2 {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .flex.space-x-2>* {
+        margin-left: 0 !important;
+    }
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 1024px) {
+
+    /* Prevent body scroll when mobile nav is open */
+    body.nav-open {
+        overflow: hidden;
+    }
+
+    /* Smooth transitions for mobile nav */
+    .mobile-nav-transition {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Better touch targets for mobile nav */
+    .mobile-nav button {
+        min-height: 48px;
+        min-width: 48px;
+    }
+}
+
+/* Scrollable container improvements */
+.overflow-y-auto {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+    width: 6px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Ensure proper height distribution */
+.h-full {
+    height: 100%;
+}
+
+.flex-1 {
+    flex: 1 1 0%;
+}
+
+.min-h-0 {
+    min-height: 0;
+}

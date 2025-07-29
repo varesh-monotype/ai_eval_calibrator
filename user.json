@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "varesh.tuli@monotype.com",
+            "password": "Monotype123#",
+            "email": "varesh.tuli@monotype.com",
+            "role": "admin",
+            "name": "Administrator"
+        },
+        {
+            "id": 2,
+            "username": "anand.vijay@monotype.com",
+            "password": "Monotype123#",
+            "email": "anand.vijay@monotype.com",
+            "role": "user",
+            "name": "Anand Vijay"
+        },
+        {
+            "id": 3,
+            "username": "charles.nix@monotype.com",
+            "password": "Monotype123#",
+            "email": "charles.nix@monotype.com",
+            "role": "user",
+            "name": "Charles Nix"
+        }
+    ]
+}
