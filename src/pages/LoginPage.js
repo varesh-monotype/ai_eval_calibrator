@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User, Lock, Eye, EyeOff, AlertCircle, Zap, Sparkles } from 'lucide-react';
+import { getApiUrl } from '../config';
 
 const LoginPage = () => {
     const [username, setUsername] = useState('');
@@ -16,7 +17,7 @@ const LoginPage = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch('http://localhost:3001/api/login', {
+            const response = await fetch(getApiUrl('/api/login'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

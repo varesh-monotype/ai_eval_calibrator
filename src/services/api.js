@@ -163,7 +163,7 @@ export const saveFontScore = async (prompt, fontData, score, reason = '') => {
         console.log('Saving font score to JSON:', feedbackData);
 
         // Save to server JSON file
-        const response = await axios.post('http://localhost:3001/api/feedback', {
+        const response = await axios.post(`${getApiUrl('/api/feedback')}`, {
             promptName: prompt,
             feedbackData: feedbackData
         }, {
@@ -195,7 +195,7 @@ export const getFontScores = async () => {
         }
 
         // Get from server JSON file with username
-        const response = await axios.get(`http://localhost:3001/api/feedback?username=${encodeURIComponent(username)}`, {
+        const response = await axios.get(`${getApiUrl('/api/feedback')}?username=${encodeURIComponent(username)}`, {
             timeout: 30000
         });
 
@@ -230,7 +230,7 @@ export const resetPromptFeedback = async (promptName) => {
             throw new Error('User not found');
         }
 
-        const response = await axios.delete(`http://localhost:3001/api/feedback/${encodeURIComponent(promptName)}?username=${encodeURIComponent(username)}`, {
+        const response = await axios.delete(`${getApiUrl('/api/feedback')}/${encodeURIComponent(promptName)}?username=${encodeURIComponent(username)}`, {
             headers: {
                 'Content-Type': 'application/json',
             },

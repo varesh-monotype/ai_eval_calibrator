@@ -12,7 +12,7 @@ const config = {
     // Development settings
     DEV: {
         // Base URL for development
-        BASE_URL: process.env.REACT_APP_BASE_URL || 'http://localhost:3000',
+        BASE_URL: process.env.REACT_APP_BASE_URL || 'http://172.22.1.139:3000',
 
         // API timeout in milliseconds
         TIMEOUT: 30000,
